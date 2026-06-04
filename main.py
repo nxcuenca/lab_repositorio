@@ -35,4 +35,8 @@ def division(a:int, b:int):
 
 @app.get("/clave-secreta")
 def obtener_clave_secreta():
-    return {"resultado": SECRET_KEY}
+    return {"clave": SECRET_KEY}
+
+@app.get("/titulo-api")
+def titulo_api():
+    return {"titulo": settings.title_api}

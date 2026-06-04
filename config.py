@@ -4,6 +4,7 @@ from pydantic import SecretStr
 class Settings(BaseSettings):
     database_url:SecretStr
     clave_secreta:SecretStr
+    lab_secreto:str
 
     title_api:str = "Mi API nueva"
 
