@@ -3,6 +3,8 @@ from config import settings
 
 app = FastAPI()
 
+SECRET_KEY = settings.clave_secreta.get_secret_value()
+
 @app.get("/hello")
 def hola_mundo():
     return {"mesagge":"Hola Equipo"}
@@ -30,3 +32,7 @@ def multiplicacion(a:int, b:int):
 def division(a:int, b:int):
     resultado = a / b
     return {"resultado": resultado}
+
+@app.get("/clave-secreta")
+def obtener_clave_secreta():
+    return {"resultado": SECRET_KEY}
