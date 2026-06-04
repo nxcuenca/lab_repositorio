@@ -14,3 +14,18 @@ def root_endpoint():
 def sumar(a:int, b:int):
     resultado = a + b
     return {"resultado": resultado}
+
+@app.get("/resta")
+def resta(a:int, b:int):
+    resultado = a - b
+    return {"resultado": resultado}
+
+@app.get("/multiplicacion")
+def multiplicacion(a:int, b:int):
+    resultado = a * b
+    return {"resultado": resultado}
+
+@app.get("/division")
+def division(a:int, b:int):
+    resultado = a / b
+    return {"resultado": resultado}
